@@ -4,38 +4,38 @@ import { FaReact, FaDatabase, FaShieldAlt } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiStripe } from "react-icons/si";
 
 const Features = () => {
-  const features = [
-    {
-      icon: SiNextdotjs,
-      title: "Next.js 14",
-      description: "App dir, Routing, Layouts, components, and more.",
-    },
-    {
-      icon: FaReact,
-      title: "React 18",
-      description: "Server and Client Components. using hooks and context.",
-    },
-    {
-      icon: FaDatabase,
-      title: "Database",
-      description: "Postgres basic database and other cool features to come.",
-    },
-    {
-      icon: SiTailwindcss,
-      title: "Components",
-      description: "Awesome components built with Tailwind CSS and more to come.",
-    },
-    {
-      icon: FaShieldAlt,
-      title: "Authentication",
-      description: "Talk about your authentication features built into your app.",
-    },
-    {
-      icon: SiStripe,
-      title: "Subscriptions",
-      description: "Talk about your subscription features and how they work.",
-    },
-  ];
+ const features = [
+  {
+    icon: FaShieldAlt,
+    title: "Policy Simulation",
+    description: "Assess and visualize the effect of socio-technical decisions on communities.",
+  },
+  {
+    icon: FaReact,
+    title: "What-if Analysis",
+    description: "Explore alternative futures with social, economic, and environmental variations.",
+  },
+  {
+    icon: FaDatabase,
+    title: "Integrated Data",
+    description: "Use social, physical, cyber, and environmental sensing for accurate insights.",
+  },
+  {
+    icon: SiNextdotjs,
+    title: "Community Typing",
+    description: "Simulate planning across diverse scales — from rural to multi-continental.",
+  },
+  {
+    icon: SiTailwindcss,
+    title: "Dynamic Reports",
+    description: "Generate system vulnerability, recovery efficiency, and resilience dashboards.",
+  },
+  {
+    icon: SiStripe,
+    title: "Collaboration Tools",
+    description: "Foster civic engagement and cross-sector collaboration for policy planning.",
+  },
+];
 
   return (
     <section className="container mx-auto px-4 py-12 bg-gray-50 dark:bg-gray-900 transition-colors duration-200 rounded-lg">
@@ -43,8 +43,7 @@ const Features = () => {
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">Features</h2>
           <p className="mt-8 text-xl text-gray-600 dark:text-gray-300 font-light">
-            Highlight cool features of your app using the beautifully designed custom cards with icons. You can use any
-            icon you want.
+              Discover how CommunityComput empowers urban and rural communities through advanced simulation, data integration, and resilience modeling — all designed to support sustainable, inclusive, and informed decision-making.
           </p>
         </div>
         <div className="mt-10">

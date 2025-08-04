@@ -40,18 +40,16 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, isOpen, t
 
 const defaultAccordionItems = [
   {
-    title: "Sign up for free",
-    content: "Start your journey with a 34-day trial. It's easy no credit card or commitment.",
+    title: "Evaluate policy impact",
+    content: "Understand how new policies affect communities and infrastructure short- and long-term.",
   },
   {
-    title: "Easy to use",
-    content:
-      "Our app is designed to be user-friendly and easy to use. We want to provide a seamless experience for your users so that you can focus on what matters.",
+    title: "Model extreme event response",
+    content: "Simulate and predict system behavior during droughts, social unrest, or infrastructure failures.",
   },
   {
-    title: "Focus on what matters",
-    content:
-      "With better financial management, you can reduce money-related stress and focus on what matters most. More to come.",
+    title: "Improve community resilience",
+    content: "Support decision-making with actionable recommendations, risk mitigation, and training simulations.",
   },
 ];
 

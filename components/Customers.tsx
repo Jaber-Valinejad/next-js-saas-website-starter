@@ -8,15 +8,25 @@ import {
   AiOutlineCode,
   AiOutlineCiCircle,
 } from "react-icons/ai";
+import {
+  FaFire,        // Wildfire
+  FaWater,       // Flood
+  FaWind,        // Hurricane
+  FaBolt,        // Lightning/Storm
+  FaMountain,    // Earthquake
+  FaBiohazard,   // Pandemic/Biological threat
+  FaRadiation,   // Nuclear risk
+} from "react-icons/fa";
+
 
 const icons = [
-  { Icon: AiTwotoneBug },
-  { Icon: AiOutlineDiscord },
-  { Icon: AiTwotoneExperiment },
-  { Icon: AiOutlineTaobao },
-  { Icon: AiOutlineSpotify },
-  { Icon: AiOutlineCode },
-  { Icon: AiOutlineCiCircle },
+  { Icon: FaFire },
+  { Icon: FaWater },
+  { Icon: FaWind },
+  { Icon: FaBolt },
+  { Icon: FaMountain },
+  { Icon: FaBiohazard },
+  { Icon: FaRadiation },
 ];
 
 const Customers: React.FC = () => {
@@ -26,7 +36,7 @@ const Customers: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row w-full">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-0 text-white dark:text-black text-center md:text-left md:w-1/3">
-              Over 50,000 people rely on our app for their daily needs
+              Over 400 climate disasters have cost the U.S. over $2.9 trillion since 1980. 
             </h2>
             <div className="flex flex-wrap justify-center md:justify-end gap-6 md:w-2/3">
               {icons.map(({ Icon }, index) => (
