@@ -18,9 +18,16 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, isOpen, t
           isOpen ? "bg-black dark:bg-gray-900" : "bg-black dark:bg-gray-900"
         }`}
       >
-        <button className="w-full text-left p-4 flex justify-between items-center" onClick={toggleOpen}>
+        <button
+          className="w-full text-left p-4 flex justify-between items-center"
+          onClick={toggleOpen}
+        >
           <span className="text-xl font-semibold text-white dark:text-white">{title}</span>
-          <span className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
+          <span
+            className={`transform transition-transform duration-300 ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          >
             <FaChevronDown className="text-2xl text-white" />
           </span>
         </button>
@@ -40,16 +47,40 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, isOpen, t
 
 const defaultAccordionItems = [
   {
-    title: "Evaluate policy impact",
-    content: "Understand how new policies affect communities and infrastructure short- and long-term.",
+    title: "Reduce Collaboration Time by 3x",
+    content: "Streamline inter-departmental and cross-agency coordination using AI-driven workflows that cut the time required for collaboration to one-third.",
   },
   {
-    title: "Model extreme event response",
-    content: "Simulate and predict system behavior during droughts, social unrest, or infrastructure failures.",
+    title: "Increase Collaboration Efficiency by 3x",
+    content: "Leverage machine learning analytics to optimize communication channels, ensuring stakeholders achieve more in less time with fewer resources.",
   },
   {
-    title: "Improve community resilience",
-    content: "Support decision-making with actionable recommendations, risk mitigation, and training simulations.",
+    title: "Lower Energy Consumption by 2.5x",
+    content: "Adopt data-driven collaboration tools that minimize the environmental and operational energy footprint while maintaining high productivity.",
+  },
+  {
+    title: "Cut Collaboration Costs by 3x",
+    content: "Deploy AI-assisted planning and resource allocation to significantly reduce administrative and operational expenses.",
+  },
+  {
+    title: "Enhance Resilience and Reduce Losses by 5x",
+    content: "Predict risks, identify vulnerabilities, and implement proactive strategies to safeguard infrastructure and communities.",
+  },
+  {
+    title: "Promote Sustainability with a 3x Improvement",
+    content: "Integrate sustainability metrics into decision-making to triple environmental impact performance.",
+  },
+  {
+    title: "Amplify & Streamline Decision-Making by 10x",
+    content: "Use generative AI to rapidly model scenarios, assess outcomes, and deliver decisions with unparalleled speed and precision.",
+  },
+  {
+    title: "Boost Community Efficiency by 5x",
+    content: "Apply data science models to optimize public service delivery, resource allocation, and community program execution.",
+  },
+  {
+    title: "Accelerate Community Development by 2x",
+    content: "Enhance urban and rural development planning cycles with AI-powered simulations and predictive analytics.",
   },
 ];
 

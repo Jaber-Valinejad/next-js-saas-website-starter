@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
         <p className="text-xl font-light text-gray-700 dark:text-gray-300 mb-8">
           125 Western Avenue, Allston, Massachusetts 02134, United States<br />
           <a href="mailto:info@communitycomput.ai" className="underline">
-            info@communitycomput.ai
+            info@communitycomput.io
           </a>
         </p>
         {/* Optional: Embed a form below if needed */}

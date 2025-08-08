@@ -3,8 +3,9 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section 
-    id="hero"
-    className="relative text-center my-32 mx-4 sm:mx-8 md:mx-16 lg:mx-24 h-[90vh] flex items-center justify-center overflow-hidden">
+      id="hero"
+      className="relative text-center my-32 mx-4 sm:mx-8 md:mx-16 lg:mx-24 h-[90vh] flex items-center justify-center overflow-hidden"
+    >
       {/* Background video */}
       <video
         autoPlay
@@ -18,13 +19,17 @@ export default function Hero() {
       </video>
 
       {/* Overlay content */}
-      <div className="relative z-10 px-6">
-        <h1 className="font-sans text-3xl tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-md">
+      <div className="relative z-10 my-32 mx-4">
+        <h1 className="font-sans text-3xl tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 drop-shadow-md">
           CommunityComput
         </h1>
-        <p className="text-xl text-white mb-12 font-light drop-shadow">
-          A community computing platform enabling sustainable and resilient urban planning through decision modeling, simulation, and policy evaluation.
+
+        {/* Inspirational quote */}
+        <p className="text-lg sm:text-xl md:text-2xl italic text-white mb-8 font-light drop-shadow max-w-3xl mx-auto leading-relaxed">
+          “Through our choices and actions, we strive not only to preserve the Earth's precious resources, but also to serve as faithful stewards for the generations to come.”
         </p>
+
+     
         <div className="flex justify-center space-x-6">
           <Link
             href="#hero"

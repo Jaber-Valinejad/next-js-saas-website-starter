@@ -1,6 +1,6 @@
-import Review from "./Review";
+import { FaStar } from "react-icons/fa";
 
-interface ReviewData {
+interface ReviewProps {
   rating: number;
   title: string;
   content: string;
@@ -8,60 +8,83 @@ interface ReviewData {
   designation: string;
 }
 
-interface ReviewsProps {
-  reviews?: ReviewData[];
-}
-
-const defaultReviews: ReviewData[] = [
-  {
-    rating: 5,
-    title: "Best app ever!",
-    content:
-      "This app has been a game-changer for me! It's made tracking my daily activities so much easier. I love how intuitive and user-friendly it is.",
-    author: "Jonas Aly",
-    designation: "Founder @ Company",
-  },
-  {
-    rating: 5,
-    title: "Super helpful to stay organized",
-    content:
-      "I can't thank this app enough for helping me stay on top of my tasks. The reminders have saved me from missing important deadlines, and I'm much more organized now.",
-    author: "Mark Bures",
-    designation: "Businessman",
-  },
-  {
-    rating: 5,
-    title: "Great app that saves time",
-    content:
-      "The app's integration with my other tools is seamless. I can easily check my progress and activities without having to switch between multiple platforms.",
-    author: "William Kolas",
-    designation: "Student",
-  },
-  {
-    rating: 4,
-    title: "Seriously life changing app!",
-    content:
-      "The insights and reports have been eye-opening. I now have a better understanding of my habits and can make adjustments to improve my productivity.",
-    author: "Andrew Chan",
-    designation: "Manager @ AB Company",
-  },
-];
-
-const Reviews: React.FC<ReviewsProps> = ({ reviews = defaultReviews }) => {
+const Review: React.FC<ReviewProps> = ({
+  rating = 5,
+  title,
+  content,
+  author,
+  designation,
+}) => {
   return (
-    <section className="py-24 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-gray-900 dark:text-white">
-          A beautiful reviews section
+    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+      <div className="flex items-center mb-2">
+        {[...Array(5)].map((_, i) => (
+          <FaStar
+            key={i}
+            className={`w-5 h-5 ${i < rating ? "text-green-500" : "text-gray-300"}`}
+          />
+        ))}
+      </div>
+      <h3 className="text-xl mb-2 text-gray-900 dark:text-white">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300 mb-4 font-light">{content}</p>
+      <div>
+        <p className="text-gray-900 dark:text-white">{author}</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 font-light">
+          {designation}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default function Reviews() {
+  const reviews = [
+    {
+      rating: 5,
+      title: "A much-needed decision-support tool",
+      content:
+        "This kind of modeling could help us evaluate resilience strategies before making major investments—something we’ve been missing for years.",
+      author: "Ali Ghasemi",
+      designation: "Program Manager, U.S. Department of Energy",
+    },
+    {
+      rating: 5,
+      title: "Bridging data and actionable policy",
+      content:
+        "The ability to integrate infrastructure, environmental, and social data into a single planning platform could save agencies months of coordination time.",
+      author: "Brittany Kiessling",
+      designation: "Social Scientist, U.S. Environmental Protection Agency",
+    },
+    {
+      rating: 5,
+      title: "Essential for hazard and disaster planning",
+      content:
+        "If we can simulate community responses to extreme events ahead of time, we can allocate resources far more effectively.",
+      author: "Gary Monitz",
+      designation: "Hazard Navigation Planner, FEMA",
+    },
+    {
+      rating: 5,
+      title: "Supports smarter urban growth",
+      content:
+        "A platform that lets us test multiple growth and infrastructure scenarios would be invaluable for sustainable city planning.",
+      author: "Aimee Nassif",
+      designation: "Deputy Director of Development, City of Lee's Summit",
+    },
+  ];
+
+  return (
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-center text-gray-900 dark:text-white mb-12">
+          What Experts Are Saying
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
-          {reviews.map((review, index) => (
-            <Review key={index} {...review} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {reviews.map((r, i) => (
+            <Review key={i} {...r} />
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default Reviews;
+}
